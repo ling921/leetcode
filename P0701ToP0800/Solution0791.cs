@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace P0701ToP0800
 {
@@ -26,7 +27,7 @@ namespace P0701ToP0800
                     letters[c] = 1;
             }
 
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             foreach (var pair in letters)
             {
                 int times = pair.Value;
