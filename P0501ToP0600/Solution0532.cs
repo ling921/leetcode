@@ -15,7 +15,8 @@ namespace P0501ToP0600
 
         public int FindPairs(int[] nums, int k)
         {
-            if (k < 0) return 0;
+            if (k < 0)
+                return 0;
             Array.Sort(nums);
             Dictionary<int, bool> dic = new Dictionary<int, bool>();
             int result = 0;

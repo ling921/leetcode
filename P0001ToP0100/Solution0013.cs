@@ -7,7 +7,6 @@
     {
         public Solution0013()
         {
-
         }
 
         public int RomanToInt(string s)

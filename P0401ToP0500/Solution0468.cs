@@ -52,7 +52,7 @@ namespace P0401ToP0500
             if (ips.Length == 8)
             {
                 foreach (var i in ips)
-                {                    
+                {
                     if (i.Length > 0 && i.Length <= 4)
                     {
                         var result = int.TryParse(i, NumberStyles.HexNumber, default, out int temp);

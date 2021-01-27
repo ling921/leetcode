@@ -19,6 +19,7 @@ namespace P0001ToP0100
         {
             return Search(nums, 0, nums.Length, target);
         }
+
         private int Search(int[] nums, int low, int high, int target)
         {
             if (low > high)

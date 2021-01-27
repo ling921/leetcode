@@ -1,5 +1,4 @@
 ﻿using CommonLibrary;
-using System;
 
 namespace P0501ToP0600
 {
@@ -12,7 +11,7 @@ namespace P0501ToP0600
         {
             int[,] nums = new int[2, 2] { { 1, 2 }, { 3, 4 } };
             int[,] result = MatrixReshape(nums, 1, 4);
-            Console.WriteLine(result.ToConsoleString());
+            result.Print();
         }
 
         public int[,] MatrixReshape(int[,] nums, int r, int c)

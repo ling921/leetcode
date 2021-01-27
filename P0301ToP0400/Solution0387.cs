@@ -9,7 +9,6 @@ namespace P0301ToP0400
     {
         public Solution0387()
         {
-
         }
 
         public int FirstUniqChar(string s)

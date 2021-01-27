@@ -37,7 +37,7 @@ namespace P0401ToP0500
         }
     }
 
-    class Solution2
+    internal class Solution2
     {
         public int MinMoves2(int[] nums)
         {

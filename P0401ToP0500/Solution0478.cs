@@ -18,21 +18,22 @@ namespace P0401ToP0500
                 Console.WriteLine(Math.Sqrt(point[0] * point[0] + point[1] * point[1]));
                 Thread.Sleep(new Random().Next(200));
             }
-
         }
 
         private class Solution
         {
+            private double radius;
+
+            private double x_center;
+
+            private double y_center;
+
             public Solution(double radius, double x_center, double y_center)
             {
                 this.radius = radius;
                 this.x_center = x_center;
                 this.y_center = y_center;
             }
-
-            private double radius;
-            private double x_center;
-            private double y_center;
 
             public double[] RandPoint()
             {

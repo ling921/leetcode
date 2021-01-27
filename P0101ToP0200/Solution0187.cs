@@ -20,7 +20,8 @@ namespace P0101ToP0200
 
         public IList<string> FindRepeatedDnaSequences(string s)
         {
-            if (s.Length <= 10) return new List<string>();
+            if (s.Length <= 10)
+                return new List<string>();
             Dictionary<string, int> keys = new Dictionary<string, int>();
             List<string> results = new List<string>();
             for (int i = 0; i <= s.Length - 10; i++)

@@ -13,7 +13,7 @@ namespace P0501ToP0600
         public Solution0506()
         {
             var nums = new[] { 10, 3, 8, 9, 4 };
-            Console.WriteLine(FindRelativeRanks(nums).ToConsoleString());
+            FindRelativeRanks(nums).Print();
         }
 
         public string[] FindRelativeRanks(int[] nums)

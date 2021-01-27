@@ -30,16 +30,16 @@ namespace P0001ToP0100
             int[,] combineArr = new int[len, k];
             IList<IList<int>> result = new List<IList<int>>();
 
-
             return result;
         }
+
         private int Factorial(int num)
         {
             return num == 1 ? 1 : Factorial(num - 1) * num;
         }
+
         private void Combine(int n, int k, List<int> list, ref IList<IList<int>> combineList)
         {
-
         }
     }
 }

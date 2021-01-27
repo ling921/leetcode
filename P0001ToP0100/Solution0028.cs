@@ -7,7 +7,6 @@
     {
         public Solution0028()
         {
-
         }
 
         public int StrStr(string haystack, string needle)

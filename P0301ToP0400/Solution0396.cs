@@ -9,7 +9,6 @@ namespace P0301ToP0400
     {
         public Solution0396()
         {
-
             Console.WriteLine();
         }
 

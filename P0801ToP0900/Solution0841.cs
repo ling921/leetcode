@@ -20,6 +20,7 @@ namespace P0801ToP0900
         }
 
         /*执行用时: 160 ms, 在Keys and Rooms的C#提交中击败了77.78% 的用户*/
+
         public bool CanVisitAllRooms(IList<IList<int>> rooms)
         {
             bool[] keys = new bool[rooms.Count];

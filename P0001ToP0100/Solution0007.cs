@@ -7,8 +7,6 @@
     {
         public Solution0007()
         {
-
-
         }
 
         public int Reverse(int x)

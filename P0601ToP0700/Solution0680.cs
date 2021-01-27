@@ -29,8 +29,8 @@ namespace P0601ToP0700
                         || IsPalindrome(s.Substring(l + 1, s.Length - 2 * l - 1));
             }
             return true;
-
         }
+
         public bool IsPalindrome(string s)
         {
             int l = 0, r = s.Length - 1;

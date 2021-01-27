@@ -21,13 +21,9 @@ namespace P0001ToP0100
         {
             IList<int> result = new List<int>();
 
-
-
-
-
-
             return result;
         }
+
         private int FirstIndex(string s, string search)
         {
             for (int i = 0; i < s.Length - search.Length; i++)
@@ -35,6 +31,7 @@ namespace P0001ToP0100
                     return i;
             return -1;
         }
+
         private int LastIndex(string s, string search)
         {
             for (int i = s.Length - 1; i >= search.Length - 1; i--)

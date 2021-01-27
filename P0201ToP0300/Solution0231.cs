@@ -19,10 +19,14 @@ namespace P0201ToP0300
 
         public bool IsPowerOfTwo(int n)
         {
-            if (n <= 0) return false;
-            else if (n == 1) return true;
-            else if ((n >> 1 << 1) != n) return false;
-            else return IsPowerOfTwo(n >> 1);
+            if (n <= 0)
+                return false;
+            else if (n == 1)
+                return true;
+            else if ((n >> 1 << 1) != n)
+                return false;
+            else
+                return IsPowerOfTwo(n >> 1);
         }
     }
 }

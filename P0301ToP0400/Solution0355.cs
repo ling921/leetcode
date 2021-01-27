@@ -3,6 +3,12 @@ using System.Collections.Generic;
 
 namespace P0301ToP0400
 {
+    public struct TwitterInfo
+    {
+        public int poster;
+        public int twitterIndex;
+    }
+
     /// <summary>
     /// 355. Design Twitter
     /// </summary>
@@ -31,8 +37,8 @@ namespace P0301ToP0400
             Console.ReadKey();
         }
 
-        void Write(IList<int> list)
-        {            
+        private void Write(IList<int> list)
+        {
             foreach (var item in list)
                 Console.Write($"{item}  ");
             Console.WriteLine();
@@ -52,6 +58,7 @@ namespace P0301ToP0400
         public List<TwitterInfo> TwitterList;
 
         #region 构造函数
+
         /// <summary>
         /// Initialize your data structure here.
         /// </summary>
@@ -61,9 +68,11 @@ namespace P0301ToP0400
             TwitterList = new List<TwitterInfo>() { new TwitterInfo() { poster = 1, twitterIndex = 1 } };
             TwitterList.RemoveAt(0);
         }
+
         #endregion
 
         #region PostTweet
+
         /// <summary>
         /// Compose a new tweet.
         /// </summary>
@@ -75,11 +84,15 @@ namespace P0301ToP0400
                 UserList.Add(new TwitterUser() { id = userId });
             TwitterList.Add(new TwitterInfo() { poster = userId, twitterIndex = tweetId });
         }
+
         #endregion
 
         #region GetNewsFeed
+
         /// <summary>
-        /// Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.
+        /// Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news
+        /// feed must be posted by users who the user followed or by the user herself. Tweets must
+        /// be ordered from most recent to least recent.
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
@@ -107,9 +120,11 @@ namespace P0301ToP0400
             }
             return newsList;
         }
+
         #endregion
 
         #region Follow
+
         /// <summary>
         /// Follower follows a followee. If the operation is invalid, it should be a no-op.
         /// </summary>
@@ -129,11 +144,13 @@ namespace P0301ToP0400
                 if (twitterUser.id == followerId)
                     twitterUser.followeeID.Add(followeeId);
         }
+
         #endregion
 
         #region Unfollow
+
         /// <summary>
-        /// Follower unfollows a followee. If the operation is invalid, it should be a no-op. 
+        /// Follower unfollows a followee. If the operation is invalid, it should be a no-op.
         /// </summary>
         /// <param name="followerId"></param>
         /// <param name="followeeId"></param>
@@ -147,9 +164,11 @@ namespace P0301ToP0400
                 if (twitterUser.id == followerId)
                     twitterUser.followeeID.Remove(followeeId);
         }
+
         #endregion
 
         #region IsFollowed
+
         /// <summary>
         /// Is Follower follows followee
         /// </summary>
@@ -176,9 +195,11 @@ namespace P0301ToP0400
                     return true;
             return false;
         }
+
         #endregion
 
         #region IsUserExists
+
         /// <summary>
         /// Is Twitter user exists
         /// </summary>
@@ -193,16 +214,13 @@ namespace P0301ToP0400
                     return true;
             return false;
         }
+
         #endregion
     }
+
     public class TwitterUser
     {
         public int id;
         public List<int> followeeID = new List<int>();
-    }
-    public struct TwitterInfo
-    {
-        public int poster;
-        public int twitterIndex;
     }
 }

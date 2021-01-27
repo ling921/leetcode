@@ -10,7 +10,6 @@ namespace P0001ToP0100
     {
         public Solution0008()
         {
-
         }
 
         public int MyAtoi(string str)

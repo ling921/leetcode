@@ -23,7 +23,7 @@ namespace P0001ToP0100
                 return GetMiddleOfArray(nums2);
             if (len2 == 0)
                 return GetMiddleOfArray(nums1);
-            if(nums1[0] > nums2[^1])
+            if (nums1[0] > nums2[^1])
             {
                 if (len1 > len2)
                     return GetMiddleOfArray(nums1[len2..]);
@@ -32,7 +32,7 @@ namespace P0001ToP0100
                 else
                     return (nums1[0] + nums2[^1]) / 2D;
             }
-            else if(nums2[0] > nums1[^1])
+            else if (nums2[0] > nums1[^1])
             {
                 if (len1 > len2)
                     return GetMiddleOfArray(nums1[..^len2]);

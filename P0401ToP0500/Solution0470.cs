@@ -10,7 +10,7 @@ namespace P0401ToP0500
         public Solution0470()
         {
             Solution solution = new Solution();
-            for (int i = 0; i< 100; i++)
+            for (int i = 0; i < 100; i++)
                 Console.WriteLine(solution.Rand10());
         }
 

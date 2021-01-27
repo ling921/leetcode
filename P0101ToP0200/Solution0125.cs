@@ -7,7 +7,6 @@
     {
         public Solution0125()
         {
-
         }
 
         public bool IsPalindrome(string s)

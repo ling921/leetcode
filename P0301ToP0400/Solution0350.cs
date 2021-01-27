@@ -10,12 +10,10 @@ namespace P0301ToP0400
     {
         public Solution0350()
         {
-
         }
 
         public int[] Intersect(int[] nums1, int[] nums2)
         {
-
             Array.Sort(nums1);
             Array.Sort(nums2);
             List<int> common = new List<int>();
@@ -29,7 +27,8 @@ namespace P0301ToP0400
                 else
                 {
                     common.Add(nums1[i]);
-                    i++; j++;
+                    i++;
+                    j++;
                 }
             }
             return common.ToArray();

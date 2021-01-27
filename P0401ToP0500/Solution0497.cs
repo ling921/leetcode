@@ -19,7 +19,7 @@ namespace P0401ToP0500
             for (int i = 0; i < 100; i++)
             {
                 int[] arr = s.Pick();
-                Console.WriteLine(arr.ToConsoleString());
+                arr.Print();
             }
         }
 

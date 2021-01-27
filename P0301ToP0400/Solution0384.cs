@@ -15,7 +15,7 @@ namespace P0301ToP0400
         }
     }
 
-    class Solution
+    internal class Solution
     {
         private int[] defaultArray;
         private int len;
@@ -27,12 +27,14 @@ namespace P0301ToP0400
         }
 
         /** Resets the array to its original configuration and return it. */
+
         public int[] Reset()
         {
             return defaultArray;
         }
 
         /** Returns a random shuffling of the array. */
+
         public int[] Shuffle()
         {
             int[] newNums = new int[len];

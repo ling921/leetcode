@@ -7,7 +7,6 @@
     {
         public Solution0191()
         {
-
         }
 
         public int HammingWeight(uint n)

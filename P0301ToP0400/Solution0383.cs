@@ -9,7 +9,6 @@ namespace P0301ToP0400
     {
         public Solution0383()
         {
-
         }
 
         public bool CanConstruct(string ransomNote, string magazine)

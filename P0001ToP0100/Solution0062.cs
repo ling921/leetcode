@@ -7,6 +7,8 @@ namespace P0001ToP0100
     /// </summary>
     public class Solution0062
     {
+        public int[,] recode;
+
         public Solution0062()
         {
             Console.WriteLine(UniquePaths(19, 13));
@@ -27,6 +29,5 @@ namespace P0001ToP0100
             }
             return 1;
         }
-        public int[,] recode;
     }
 }

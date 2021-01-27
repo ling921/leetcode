@@ -7,7 +7,6 @@
     {
         public Solution0045()
         {
-
         }
 
         public int Jump(int[] nums)

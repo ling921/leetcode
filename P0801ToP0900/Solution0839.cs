@@ -27,6 +27,7 @@ namespace P0801ToP0900
             }
             return count;
         }
+
         private void SearchSimilarGroup(ref string[] A, int index)
         {
             string str = A[index];
@@ -35,6 +36,7 @@ namespace P0801ToP0900
                 if (A[i] != null && i != index && IsSimilar(A[i], str))
                     SearchSimilarGroup(ref A, i);
         }
+
         private bool IsSimilar(string a, string b)
         {
             int count = 0;

@@ -7,7 +7,6 @@
     {
         public Solution0036()
         {
-
         }
 
         public bool IsValidSudoku(char[,] board)
@@ -17,6 +16,7 @@
                     return false;
             return true;
         }
+
         private bool IsRowOrColumnValid(char[,] board, int index)
         {
             int[][] temp = new int[2][] { new int[9], new int[9] };
@@ -33,6 +33,7 @@
             }
             return true;
         }
+
         private bool IsSubBoxValid(char[,] board, int[] start)
         {
             int[] temp = new int[9];

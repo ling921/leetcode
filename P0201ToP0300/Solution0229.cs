@@ -16,11 +16,6 @@ namespace P0201ToP0300
         {
             List<int> result = new List<int>();
 
-
-
-
-
-
             return result;
         }
     }

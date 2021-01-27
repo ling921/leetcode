@@ -36,6 +36,7 @@ namespace P0501ToP0600
             }
             return count;
         }
+
         private void SetFindCircle(int[,] M, int index)
         {
             for (int i = 0; i < M.GetLength(0); i++)

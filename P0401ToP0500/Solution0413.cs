@@ -7,8 +7,9 @@
     {
         public Solution0413()
         {
-
         }
+
+        private int[] Slices { get; set; }
 
         public int NumberOfArithmeticSlices(int[] A)
         {
@@ -16,13 +17,10 @@
 
             for (int i = 0; i < A.Length; i++)
             {
-
             }
 
             return default;
         }
-
-        private int[] Slices { get; set; }
 
         private int GetSlicesFromLength(int len)
         {

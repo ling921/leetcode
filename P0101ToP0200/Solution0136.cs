@@ -7,7 +7,6 @@
     {
         public Solution0136()
         {
-
         }
 
         public int SingleNumber(int[] nums)

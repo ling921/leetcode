@@ -4,9 +4,9 @@ using System.Reflection;
 
 namespace ProblemRuner
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.Write("Input problem NO: ");
             var no = Console.ReadLine();
@@ -28,7 +28,7 @@ namespace ProblemRuner
             Console.ReadKey();
         }
 
-        static Type GetSolutionType(uint index)
+        private static Type GetSolutionType(uint index)
         {
             var assemblyNames = new[]
             {
@@ -44,6 +44,7 @@ namespace ProblemRuner
                 "P0801ToP0900.dll",
                 "P0901ToP1000.dll",
                 "P1001ToP1100.dll",
+                "P1101ToP1200.dll",
             };
             var className = $"Solution{index:D4}";
             var path = AppDomain.CurrentDomain.BaseDirectory;

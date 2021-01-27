@@ -18,7 +18,6 @@ namespace P0301ToP0400
 
         public double[] CalcEquation(string[,] equations, double[] values, string[,] queries)
         {
-
             return null;
         }
     }

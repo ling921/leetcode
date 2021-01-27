@@ -14,7 +14,6 @@ namespace P0701ToP0800
 
         public int PreimageSizeFZF(int K)
         {
-
             return default;
         }
     }

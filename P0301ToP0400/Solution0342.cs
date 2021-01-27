@@ -19,10 +19,14 @@ namespace P0301ToP0400
 
         public bool IsPowerOfFour(int num)
         {
-            if (num <= 0) return false;
-            else if (num == 1) return true;
-            else if ((num >> 2 << 2) != num) return false;
-            else return IsPowerOfFour(num >> 2);
+            if (num <= 0)
+                return false;
+            else if (num == 1)
+                return true;
+            else if ((num >> 2 << 2) != num)
+                return false;
+            else
+                return IsPowerOfFour(num >> 2);
         }
     }
 }

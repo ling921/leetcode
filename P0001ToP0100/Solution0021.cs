@@ -9,7 +9,6 @@ namespace P0001ToP0100
     {
         public Solution0021()
         {
-
         }
 
         public ListNode MergeTwoLists(ListNode l1, ListNode l2)

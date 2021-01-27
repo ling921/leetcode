@@ -9,7 +9,6 @@ namespace P0001ToP0100
     {
         public Solution0012()
         {
-
         }
 
         public string IntToRoman(int num)
