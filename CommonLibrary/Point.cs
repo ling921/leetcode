@@ -1,6 +1,8 @@
-﻿namespace CommonLibrary
+﻿using System;
+
+namespace CommonLibrary
 {
-    public struct Point
+    public struct Point : IEquatable<Point>
     {
         public int x;
         public int y;
@@ -11,18 +13,15 @@
             y = b;
         }
 
+        public bool Equals(Point other) => other.x == x && other.y == y;
+
         public override string ToString()
         {
-            return $"({this.x}, {this.y})";
+            return $"({x},{y})";
         }
 
-        public override bool Equals(object obj)
-        {
-            if (obj is Point point)
-                return this.x == point.x && this.y == point.y;
-            return false;
-        }
+        public override bool Equals(object obj) => obj is Point point && Equals(point);
 
-        public override int GetHashCode() => base.GetHashCode();
+        public override int GetHashCode() => x.GetHashCode() & y.GetHashCode();
     }
 }

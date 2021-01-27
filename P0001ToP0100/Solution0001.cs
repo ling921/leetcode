@@ -16,21 +16,6 @@ namespace P0001ToP0100
             result.Print();
         }
 
-        //public int[] TwoSum(int[] nums, int target)
-        //{
-        //    var list = new List<int>();
-        //    for (int i = 0; i < nums.Length; i++)
-        //    {
-        //        if(list.Contains(nums[i]))
-        //        {
-        //            var j = list.IndexOf(nums[i]);
-        //            return new[] { j, i };
-        //        }
-        //        list.Add(target - nums[i]);
-        //    }
-        //    return Array.Empty<int>();
-        //}
-
         public int[] TwoSum(int[] nums, int target)
         {
             var dic = new Dictionary<int, int>();

@@ -17,7 +17,7 @@ namespace CommonLibrary
 
         private static string ToConsoleString<T>(this IEnumerable<T> items)
         {
-            var str = string.Join(",", items.Select(i => i.ToString()));
+            var str = string.Join(",", items.Select(i => i is IEnumerable<object> t ? t.ToConsoleString() : i.ToString()));
             return "[" + str + "]";
         }
 

@@ -1,4 +1,5 @@
 ﻿using CommonLibrary;
+using System;
 
 namespace P0001ToP0100
 {
@@ -9,25 +10,34 @@ namespace P0001ToP0100
     {
         public Solution0021()
         {
+            var l1 = "[1,2,4]".LoadAsListNode();
+            var l2 = "[1,3,4]".LoadAsListNode();
+            Console.WriteLine(MergeTwoLists(l1, l2));
         }
 
         public ListNode MergeTwoLists(ListNode l1, ListNode l2)
         {
             ListNode merge = new ListNode(0);
-            while (l1.next != null && l2.next != null)
+            var temp = merge;
+            while (l1 != null && l2 != null)
             {
-                if (l1.val <= l2.val)
+                if (l1.val < l2.val)
                 {
-                    merge.next = l1;
+                    temp.next = l1;
                     l1 = l1.next;
                 }
                 else
                 {
-                    merge.next = l1;
-                    l1 = l1.next;
+                    temp.next = l2;
+                    l2 = l2.next;
                 }
+                temp = temp.next;
             }
-            return merge;
+            if (l1 != null)
+                temp.next = l1;
+            if (l2 != null)
+                temp.next = l2;
+            return merge.next;
         }
     }
 }

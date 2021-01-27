@@ -12,10 +12,7 @@
 
         public override string ToString()
         {
-            if (this.next == null)
-                return $"{val}";
-            else
-                return $"{val} -> {this.next}";
+            return next == null ? $"{val}" : $"{val} -> {next}";
         }
     }
 }

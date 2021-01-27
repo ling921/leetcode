@@ -1,4 +1,6 @@
-﻿namespace P0001ToP0100
+﻿using System;
+
+namespace P0001ToP0100
 {
     /// <summary>
     /// 7. Reverse Integer
@@ -7,6 +9,8 @@
     {
         public Solution0007()
         {
+            var x = int.MinValue;
+            Console.WriteLine(Reverse(x));
         }
 
         public int Reverse(int x)

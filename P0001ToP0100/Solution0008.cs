@@ -10,12 +10,17 @@ namespace P0001ToP0100
     {
         public Solution0008()
         {
+            var str = "123456789";
+            Console.WriteLine(MyAtoi(str));
         }
 
         public int MyAtoi(string str)
         {
             if (string.IsNullOrEmpty(str))
+            {
                 return 0;
+            }
+
             StringBuilder sb = new StringBuilder();
             bool isNumStart = false, isNegative = false;
             for (int i = 0; i < str.Length; i++)
@@ -38,15 +43,21 @@ namespace P0001ToP0100
                         return 0;
                 }
                 else
+                {
                     break;
+                }
             }
             if (sb.Length > 10)
+            {
                 return isNegative ? int.MinValue : int.MaxValue;
+            }
             else if (sb.Length == 0)
+            {
                 return 0;
+            }
             else
             {
-                Int64 num = isNegative ? -Convert.ToInt64(sb.ToString()) : Convert.ToInt64(sb.ToString());
+                long num = isNegative ? -Convert.ToInt64(sb.ToString()) : Convert.ToInt64(sb.ToString());
                 return (num > int.MaxValue || num < int.MinValue) ? (isNegative ? int.MinValue : int.MaxValue) : (int)num;
             }
         }
