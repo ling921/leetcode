@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace P1101ToP1200
 {
@@ -14,30 +12,14 @@ namespace P1101ToP1200
 
         public int NumEquivDominoPairs(int[][] dominoes)
         {
-            var count = 0;
-            var dict = new Dictionary<(int, int), int>();
-            foreach (var item in dominoes)
+            var temp = new int[100];
+            int count = 0, positon = 0;
+            for (int i = 0; i < dominoes.Length; i++)
             {
-                var key = item[0] > item[1] ? (item[1], item[0]) : (item[0], item[1]);
-                if (dict.ContainsKey(key))
-                    count += dict[key]++;
-                else
-                    dict[key] = 1;
+                positon = Math.Min(dominoes[i][0], dominoes[i][1]) * 10 + Math.Max(dominoes[i][0], dominoes[i][1]);
+                count += temp[positon]++;
             }
-
             return count;
-
-            var temp = new int[10, 10];
-            foreach (var item in dominoes)
-            {
-                count += temp[item.Min(), item.Max()]++;
-            }
-
-            //return dominoes
-            //    .Select(i => i[0] > i[1] ? (i[1], i[0]) : (i[0], i[1]))
-            //    .GroupBy(i => i)
-            //    .Select(g => g.Count() * (g.Count() - 1) / 2)
-            //    .Sum();
         }
     }
 }
