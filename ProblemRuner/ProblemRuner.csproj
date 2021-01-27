@@ -17,6 +17,8 @@
     <ProjectReference Include="..\P0701ToP0800\P0701ToP0800.csproj" />
     <ProjectReference Include="..\P0801ToP0900\P0801ToP0900.csproj" />
     <ProjectReference Include="..\P0901ToP1000\P0901ToP1000.csproj" />
+    <ProjectReference Include="..\P1001ToP1100\P1001ToP1100.csproj" />
+    <ProjectReference Include="..\P1101ToP1200\P1101ToP1200.csproj" />
   </ItemGroup>
 
 </Project>

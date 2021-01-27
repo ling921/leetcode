@@ -4,9 +4,9 @@ using System.Reflection;
 
 namespace ProblemRuner
 {
-    internal class Program
+    internal static class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             Console.Write("Input problem NO: ");
             var no = Console.ReadLine();
@@ -17,13 +17,18 @@ namespace ProblemRuner
                 no = Console.ReadLine();
             }
 
-            Console.WriteLine("============================\r\nResult: ");
+            Console.WriteLine("=================================");
 
             var type = GetSolutionType(index);
             if (type == null)
+            {
                 Console.WriteLine($"Can't find solution of NO.{index}. Please check it out.");
+            }
             else
+            {
+                Console.Write("Result: ");
                 Activator.CreateInstance(type);
+            }
 
             Console.ReadKey();
         }
