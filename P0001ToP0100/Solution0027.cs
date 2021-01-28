@@ -1,4 +1,4 @@
-﻿using static CommonLibrary.PrintExtension;
+﻿using static CommonLibrary.ConsoleExtension;
 using System.Linq;
 using CommonLibrary;
 

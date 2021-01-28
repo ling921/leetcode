@@ -1,4 +1,4 @@
-﻿using static CommonLibrary.PrintExtension;
+﻿using static CommonLibrary.ConsoleExtension;
 
 namespace P0501ToP0600
 {

@@ -1,4 +1,4 @@
-﻿using static CommonLibrary.PrintExtension;
+﻿using static CommonLibrary.ConsoleExtension;
 using System;
 using System.IO;
 using System.Reflection;
@@ -10,13 +10,13 @@ namespace ProblemRuner
         private static void Main()
         {
             Write("Input problem NO: ");
-            var no = Console.ReadLine();
+            var no = ReadLine();
             uint index;
             while (string.IsNullOrEmpty(no) || !uint.TryParse(no, out index))
             {
-                Console.Clear();
+                Clear();
                 Write("Input problem NO: ");
-                no = Console.ReadLine();
+                no = ReadLine();
             }
 
             WriteLine(separator);
@@ -31,7 +31,7 @@ namespace ProblemRuner
                 Activator.CreateInstance(type);
             }
 
-            Console.ReadKey();
+            ReadKey();
         }
 
         private static Type GetSolutionType(uint index)
