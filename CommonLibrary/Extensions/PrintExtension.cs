@@ -12,7 +12,11 @@ namespace CommonLibrary
 
         public static void WriteLine<T>(T[,] matrix) => Console.WriteLine(matrix.ToConsoleString());
 
-        public static void WriteLine<T>(T value) => Console.WriteLine(value);
+        public static void WriteLine<T>(T[][] array) => Console.WriteLine(array.ToConsoleString());
+
+        public static void WriteLine(string value) => Console.WriteLine(value);
+
+        public static void WriteLine<T>(T value) where T : struct => Console.WriteLine(value);
 
         public static void WriteSeparator() => WriteLine(separator);
 
@@ -23,13 +27,17 @@ namespace CommonLibrary
 
         private static string ToConsoleString<T>(this IEnumerable<T> items)
         {
-            var str = string.Join(",", items.Select(i => i is IEnumerable<object> t ? t.ToConsoleString() : i.ToString()));
+            var str = string.Join(",", items.Select(i => i.ToString()));
             return "[" + str + "]";
         }
 
-        private static string ToConsoleString<T>(this T[,] matrix) =>
-            matrix.AsEnumerable()
-                .Select(row => row.ToConsoleString())
-                .ToConsoleString();
+        private static string ToConsoleString<T>(this T[,] matrix) => matrix
+            .AsEnumerable()
+            .Select(row => row.ToConsoleString())
+            .ToConsoleString();
+
+        private static string ToConsoleString<T>(this T[][] array) => array
+            .Select(arr => arr.ToConsoleString())
+            .ToConsoleString();
     }
 }
