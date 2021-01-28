@@ -1,4 +1,4 @@
-﻿using CommonLibrary;
+﻿using static CommonLibrary.PrintExtension;
 using System;
 using System.Collections.Generic;
 
@@ -17,7 +17,7 @@ namespace P0401ToP0500
 
             int[,] sort = ReconstructQueue(people);
 
-            sort.Print();
+            WriteLine(sort);
         }
 
         /// <summary>

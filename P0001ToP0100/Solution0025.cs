@@ -1,4 +1,4 @@
-﻿using CommonLibrary;
+﻿using CommonLibrary.DataStructures;
 using System;
 
 namespace P0001ToP0100

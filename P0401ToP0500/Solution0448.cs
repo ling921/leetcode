@@ -1,4 +1,5 @@
-﻿using CommonLibrary;
+﻿using static CommonLibrary.PrintExtension;
+using CommonLibrary;
 using System.Collections.Generic;
 
 namespace P0401ToP0500
@@ -11,7 +12,7 @@ namespace P0401ToP0500
         public Solution0448()
         {
             int[] nums = new int[] { 4, 3, 2, 7, 8, 2, 3, 1 };
-            FindDisappearedNumbers(nums).Print();
+            WriteLine(FindDisappearedNumbers(nums));
         }
 
         public IList<int> FindDisappearedNumbers(int[] nums)

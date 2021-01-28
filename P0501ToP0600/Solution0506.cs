@@ -1,4 +1,4 @@
-﻿using CommonLibrary;
+﻿using static CommonLibrary.PrintExtension;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace P0501ToP0600
         public Solution0506()
         {
             var nums = new[] { 10, 3, 8, 9, 4 };
-            FindRelativeRanks(nums).Print();
+            WriteLine(FindRelativeRanks(nums));
         }
 
         public string[] FindRelativeRanks(int[] nums)

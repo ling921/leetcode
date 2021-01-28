@@ -17,7 +17,7 @@ namespace ProblemRuner
                 no = Console.ReadLine();
             }
 
-            Console.WriteLine("=================================");
+            Console.WriteLine("================================================================");
 
             var type = GetSolutionType(index);
             if (type == null)
@@ -26,7 +26,6 @@ namespace ProblemRuner
             }
             else
             {
-                Console.Write("Result: ");
                 Activator.CreateInstance(type);
             }
 

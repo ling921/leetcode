@@ -10,8 +10,8 @@ namespace P0001ToP0100
     {
         public Solution0004()
         {
-            var nums1 = "[8,9]".LoadAsArray<int>();
-            var nums2 = "[3,4,5,6,7]".LoadAsArray<int>();
+            var nums1 = "[8,9]".ToArray<int>();
+            var nums2 = "[3,4,5,6,7]".ToArray<int>();
             var result = FindMedianSortedArrays(nums1, nums2);
             Console.WriteLine(result);
         }

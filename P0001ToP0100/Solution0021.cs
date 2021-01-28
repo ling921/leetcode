@@ -1,4 +1,5 @@
 ﻿using CommonLibrary;
+using CommonLibrary.DataStructures;
 using System;
 
 namespace P0001ToP0100
@@ -10,8 +11,8 @@ namespace P0001ToP0100
     {
         public Solution0021()
         {
-            var l1 = "[1,2,4]".LoadAsListNode();
-            var l2 = "[1,3,4]".LoadAsListNode();
+            var l1 = "[1,2,4]".ToListNode();
+            var l2 = "[1,3,4]".ToListNode();
             Console.WriteLine(MergeTwoLists(l1, l2));
         }
 

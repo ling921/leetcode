@@ -1,4 +1,5 @@
 ﻿using CommonLibrary;
+using CommonLibrary.DataStructures;
 using System;
 
 namespace P0001ToP0100
@@ -10,8 +11,8 @@ namespace P0001ToP0100
     {
         public Solution0002()
         {
-            var l1 = "[2,4,3]".LoadAsListNode();
-            var l2 = "[5,6,4]".LoadAsListNode();
+            var l1 = "[2,4,3]".ToListNode();
+            var l2 = "[5,6,4]".ToListNode();
             var result = AddTwoNumbers(l1, l2);
             Console.WriteLine(result);
         }

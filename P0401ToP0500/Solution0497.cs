@@ -1,4 +1,4 @@
-﻿using CommonLibrary;
+﻿using static CommonLibrary.PrintExtension;
 using System;
 
 namespace P0401ToP0500
@@ -19,7 +19,7 @@ namespace P0401ToP0500
             for (int i = 0; i < 100; i++)
             {
                 int[] arr = s.Pick();
-                arr.Print();
+                WriteLine(arr);
             }
         }
 
