@@ -14,6 +14,8 @@ namespace CommonLibrary
 
         public static void WriteLine<T>(T[][] array) => Console.WriteLine(array.ToConsoleString());
 
+        public static void Write(string value) => Console.Write(value);
+
         public static void WriteLine(string value) => Console.WriteLine(value);
 
         public static void WriteLine<T>(T value) where T : struct => Console.WriteLine(value);
