@@ -1,4 +1,5 @@
-﻿using System;
+﻿using static CommonLibrary.PrintExtension;
+using System;
 using System.IO;
 using System.Reflection;
 
@@ -8,21 +9,22 @@ namespace ProblemRuner
     {
         private static void Main()
         {
-            Console.Write("Input problem NO: ");
+            Write("Input problem NO: ");
             var no = Console.ReadLine();
             uint index;
             while (string.IsNullOrEmpty(no) || !uint.TryParse(no, out index))
             {
-                Console.Write("Input problem NO: ");
+                Console.Clear();
+                Write("Input problem NO: ");
                 no = Console.ReadLine();
             }
 
-            Console.WriteLine("================================================================");
+            WriteLine(separator);
 
             var type = GetSolutionType(index);
             if (type == null)
             {
-                Console.WriteLine($"Can't find solution of NO.{index}. Please check it out.");
+                WriteLine($"Can't find solution of NO.{index}. Please check it out.");
             }
             else
             {

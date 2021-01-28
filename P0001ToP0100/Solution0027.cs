@@ -27,12 +27,10 @@ namespace P0001ToP0100
 
         public int RemoveElement(int[] nums, int val)
         {
-            int valCount = 0, notValCount = 0;
+            int notValCount = 0;
             foreach (int num in nums)
             {
-                if (num == val)
-                    valCount++;
-                else
+                if (num != val)
                     nums[notValCount++] = num;
             }
             return notValCount;
