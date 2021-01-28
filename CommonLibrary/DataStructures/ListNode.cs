@@ -1,4 +1,4 @@
-﻿namespace CommonLibrary
+﻿namespace CommonLibrary.DataStructures
 {
     public class ListNode
     {

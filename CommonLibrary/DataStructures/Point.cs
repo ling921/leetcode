@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CommonLibrary
+namespace CommonLibrary.DataStructures
 {
     public struct Point : IEquatable<Point>
     {

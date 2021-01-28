@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonLibrary.DataStructures;
+using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
