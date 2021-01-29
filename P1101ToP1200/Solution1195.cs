@@ -15,10 +15,10 @@ namespace P1101ToP1200
         public class FizzBuzz
         {
             private int n;
-            private SemaphoreSlim _SemaphoreFizz = new SemaphoreSlim(0, 1);
-            private SemaphoreSlim _SemaphoreBuzz = new SemaphoreSlim(0, 1);
-            private SemaphoreSlim _SemaphoreFizzbuzz = new SemaphoreSlim(0, 1);
-            private SemaphoreSlim _SemaphoreNumber = new SemaphoreSlim(1, 1);
+            private AutoResetEvent event_FizzBuzz = new AutoResetEvent(false);
+            private AutoResetEvent event_Fizz = new AutoResetEvent(false);
+            private AutoResetEvent event_Buzz = new AutoResetEvent(false);
+            private AutoResetEvent event_number = new AutoResetEvent(false);
 
             public FizzBuzz(int n)
             {
@@ -28,67 +28,62 @@ namespace P1101ToP1200
             // printFizz() outputs "fizz".
             public void Fizz(Action printFizz)
             {
-                for (int i = 1; i < n + 1; i++)
+                var count = n / 3 - n / 15;
+                for (var i = 0; i < count; i++)
                 {
-                    if (i % 3 == 0 && i % 5 != 0)
-                    {
-                        _SemaphoreFizz.Wait();
-                        printFizz();
-                        _SemaphoreNumber.Release();
-                    }
+                    event_Fizz.WaitOne();
+                    printFizz();
+                    event_number.Set();
                 }
             }
 
             // printBuzzz() outputs "buzz".
             public void Buzz(Action printBuzz)
             {
-                for (int i = 1; i < n + 1; i++)
+                var count = n / 5 - n / 15;
+                for (var i = 0; i < count; i++)
                 {
-                    if (i % 5 == 0 && i % 3 != 0)
-                    {
-                        _SemaphoreBuzz.Wait();
-                        printBuzz();
-                        _SemaphoreNumber.Release();
-                    }
+                    event_Buzz.WaitOne();
+                    printBuzz();
+                    event_number.Set();
                 }
             }
 
             // printFizzBuzz() outputs "fizzbuzz".
             public void Fizzbuzz(Action printFizzBuzz)
             {
-                for (int i = 1; i < n + 1; i++)
+                var count = n / 15;
+                for (var i = 0; i < count; i++)
                 {
-                    if (i % 15 == 0)
-                    {
-                        _SemaphoreFizzbuzz.Wait();
-                        printFizzBuzz();
-                        _SemaphoreNumber.Release();
-                    }
+                    event_FizzBuzz.WaitOne();
+                    printFizzBuzz();
+                    event_number.Set();
                 }
             }
 
             // printNumber(x) outputs "x", where x is an integer.
             public void Number(Action<int> printNumber)
             {
-                for (int i = 1; i < n + 1; i++)
+                for (var i = 1; i <= n; i++)
                 {
-                    _SemaphoreNumber.Wait();
                     if (i % 15 == 0)
                     {
-                        _SemaphoreFizzbuzz.Release();
-                    }
-                    else if (i % 5 == 0)
-                    {
-                        _SemaphoreBuzz.Release();
+                        event_FizzBuzz.Set();
+                        event_number.WaitOne();
                     }
                     else if (i % 3 == 0)
                     {
-                        _SemaphoreFizz.Release();
+                        event_Fizz.Set();
+                        event_number.WaitOne();
+                    }
+                    else if (i % 5 == 0)
+                    {
+                        event_Buzz.Set();
+                        event_number.WaitOne();
                     }
                     else
                     {
                         printNumber(i);
-                        _SemaphoreNumber.Release();
                     }
                 }
             }
