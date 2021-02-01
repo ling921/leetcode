@@ -19,6 +19,14 @@
     <ProjectReference Include="..\P0901ToP1000\P0901ToP1000.csproj" />
     <ProjectReference Include="..\P1001ToP1100\P1001ToP1100.csproj" />
     <ProjectReference Include="..\P1101ToP1200\P1101ToP1200.csproj" />
+    <ProjectReference Include="..\P1201ToP1300\P1201ToP1300.csproj" />
+    <ProjectReference Include="..\P1301ToP1400\P1301ToP1400.csproj" />
+    <ProjectReference Include="..\P1401ToP1500\P1401ToP1500.csproj" />
+    <ProjectReference Include="..\P1501ToP1600\P1501ToP1600.csproj" />
+    <ProjectReference Include="..\P1601ToP1700\P1601ToP1700.csproj" />
+    <ProjectReference Include="..\P1701ToP1800\P1701ToP1800.csproj" />
+    <ProjectReference Include="..\P1801ToP1900\P1801ToP1900.csproj" />
+    <ProjectReference Include="..\P1901ToP2000\P1901ToP2000.csproj" />
   </ItemGroup>
 
 </Project>

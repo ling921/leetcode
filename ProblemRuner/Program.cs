@@ -51,6 +51,14 @@ namespace ProblemRuner
                 "P0901ToP1000.dll",
                 "P1001ToP1100.dll",
                 "P1101ToP1200.dll",
+                "P1201ToP1300.dll",
+                "P1301ToP1400.dll",
+                "P1401ToP1500.dll",
+                "P1501ToP1600.dll",
+                "P1601ToP1700.dll",
+                "P1701ToP1800.dll",
+                "P1801ToP1900.dll",
+                "P1901ToP2000.dll",
             };
             var className = $"Solution{index:D4}";
             var path = AppDomain.CurrentDomain.BaseDirectory;
