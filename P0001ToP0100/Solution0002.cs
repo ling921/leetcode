@@ -1,5 +1,5 @@
-﻿using CommonLibrary;
-using CommonLibrary.DataStructures;
+﻿using CommonLibrary.DataStructures;
+using CommonLibrary.Extensions;
 using System;
 
 namespace P0001ToP0100

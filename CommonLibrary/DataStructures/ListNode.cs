@@ -10,6 +10,8 @@
             val = x;
         }
 
+        public static implicit operator string(ListNode node) => node.ToString();
+
         public override string ToString()
         {
             return next == null ? $"{val}" : $"{val} -> {next}";

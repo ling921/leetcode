@@ -1,9 +1,10 @@
 ﻿using CommonLibrary.DataStructures;
+using CommonLibrary.Extensions;
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace CommonLibrary
+namespace CommonLibrary.Extensions
 {
     public static class DataLoadExtension
     {

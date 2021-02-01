@@ -1,7 +1,7 @@
 ﻿using static CommonLibrary.ConsoleExtension;
-using CommonLibrary;
 using System.Collections.Generic;
 using System.Linq;
+using CommonLibrary.Extensions;
 
 namespace P0801ToP0900
 {

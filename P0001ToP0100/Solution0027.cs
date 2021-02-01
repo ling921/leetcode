@@ -1,6 +1,6 @@
 ﻿using static CommonLibrary.ConsoleExtension;
 using System.Linq;
-using CommonLibrary;
+using CommonLibrary.Extensions;
 
 namespace P0001ToP0100
 {
