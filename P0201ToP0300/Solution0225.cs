@@ -18,7 +18,7 @@ namespace P0201ToP0300
 
         public class MyStack
         {
-            private Queue<int> _quenen;
+            private readonly Queue<int> _quenen;
 
             /** Initialize your data structure here. */
 
