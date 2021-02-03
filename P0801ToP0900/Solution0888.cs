@@ -1,4 +1,4 @@
-﻿using static CommonLibrary.ConsoleExtension;
+﻿using static CommonLibrary.Extensions.ConsoleExtension;
 using System.Collections.Generic;
 using System.Linq;
 using CommonLibrary.Extensions;

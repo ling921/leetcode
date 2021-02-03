@@ -1,5 +1,4 @@
-﻿using static CommonLibrary.ConsoleExtension;
-using CommonLibrary;
+﻿using static CommonLibrary.Extensions.ConsoleExtension;
 using System.Collections.Generic;
 
 namespace P0401ToP0500

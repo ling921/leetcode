@@ -1,4 +1,4 @@
-﻿using static CommonLibrary.ConsoleExtension;
+﻿using static CommonLibrary.Extensions.ConsoleExtension;
 
 namespace P0001ToP0100
 {

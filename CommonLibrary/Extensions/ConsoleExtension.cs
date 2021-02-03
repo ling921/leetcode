@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CommonLibrary
+namespace CommonLibrary.Extensions
 {
     public static class ConsoleExtension
     {
