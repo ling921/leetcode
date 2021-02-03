@@ -1,6 +1,6 @@
 ﻿using CommonLibrary.DataStructures;
-using CommonLibrary.Extensions;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -61,6 +61,35 @@ namespace CommonLibrary.Extensions
                 curr = curr.next;
             }
             return head;
+        }
+
+        public static TreeNode ToTreeNode(this string text)
+        {
+            var nums = text
+                .Split(new[] { '[', ']', ',' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(i => i.Trim().Equals("null", StringComparison.OrdinalIgnoreCase) ? null : (int?)int.Parse(i.Trim()))
+                .ToArray();
+            if (nums.Length == 0 || nums[0] == null)
+            {
+                return null;
+            }
+            var root = new TreeNode(nums[0] ?? 0);
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+
+            var deep = Math.Log(nums.Length + 1, 2);
+            int level = 1;
+            //while (queue.Count > 0)
+            //{
+            //    var values = nums
+            //}
+
+            //for (int i = 1; i < Math.Log(nums.Length + 1, 2); i++)
+            //{
+            //    root.left = new TreeNode()
+            //}
+
+            return root;
         }
     }
 }
