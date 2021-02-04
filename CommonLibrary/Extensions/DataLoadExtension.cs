@@ -44,8 +44,26 @@ namespace CommonLibrary.Extensions
                 throw new ArgumentException("Arguement format is wrong!");
             }
             var match = Regex.Matches(text, @"\[[\d\,\s]*\]");
-            var row = match.Count;
             return match.Select(g => g.Value.ToArray<T>()).ToArray();
+        }
+
+        public static IList<IList<T>> ToJaggedList<T>(this string text) where T : IConvertible
+        {
+            if (!text.StartsWith("[["))
+            {
+                throw new ArgumentException("Arguement format is wrong!");
+            }
+            var match = Regex.Matches(text, @"\[[\d\,\s]*\]");
+            return match.Select(g =>
+            {
+                var arr = g.Value.ToArray<T>();
+                IList<T> list = new List<T>();
+                foreach (var item in arr)
+                {
+                    list.Add(item);
+                }
+                return list;
+            }).ToList();
         }
 
         public static ListNode ToListNode(this string text)
