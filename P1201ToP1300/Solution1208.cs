@@ -18,6 +18,18 @@ namespace P1201ToP1300
 
         public int EqualSubstring(string s, string t, int maxCost)
         {
+            int left = 0, right = 0, cost = 0;
+            while (right < s.Length)
+            {
+                cost += Math.Abs(s[right] - t[right++]);
+                if (cost > maxCost)
+                    cost -= Math.Abs(s[left] - t[left++]);
+            }
+            return right - left;
+        }
+
+        public int EqualSubstring1(string s, string t, int maxCost)
+        {
             int left = 0, right = 0, count = 0;
             while (right < s.Length)
             {
