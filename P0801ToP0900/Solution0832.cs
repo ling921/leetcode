@@ -14,19 +14,17 @@ namespace P0801ToP0900
 
         public int[][] FlipAndInvertImage(int[][] A)
         {
-            int[][] res = new int[A.Length][];
-
             for (int i = 0; i < A.Length; i++)
             {
-                int len = A[i].Length;
-                res[i] = new int[len];
-                for (int j = 0; j < len; j++)
+                for (int j = 0; j < (A[0].Length + 1) / 2; j++)
                 {
-                    res[i][len - 1 - j] = A[i][j] == 0 ? 1 : 0;
+                    if (A[i][j] == A[i][A[0].Length - 1 - j])
+                    {
+                        A[i][j] = A[i][A[0].Length - 1 - j] = A[i][j] ^ 1;
+                    }
                 }
             }
-
-            return res;
+            return A;
         }
 
         public int[][] FlipAndInvertImage2(int[][] A)
@@ -34,15 +32,13 @@ namespace P0801ToP0900
             int temp;
             for (int i = 0; i < A.Length; i++)
             {
-                int len = A[i].Length;
-                for (int j = 0; j < (len + 1) / 2; j++)
+                for (int j = 0; j < (A[0].Length + 1) / 2; j++)
                 {
-                    temp = A[i][len - 1 - j] == 0 ? 1 : 0;
-                    A[i][len - 1 - j] = A[i][j] == 0 ? 1 : 0;
-                    A[i][j] = temp;
+                    temp = A[i][A[0].Length - 1 - j];
+                    A[i][A[0].Length - 1 - j] = A[i][j] ^ 1;
+                    A[i][j] = temp ^ 1;
                 }
             }
-
             return A;
         }
     }
