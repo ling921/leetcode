@@ -14,8 +14,8 @@ namespace CommonLibrary.Extensions
             {
                 throw new ArgumentException("Arguement format is wrong!");
             }
-            var match = Regex.Matches(text, @"(\-?\d+)");
-            return match.Select(g => (T)Convert.ChangeType(g.Value, default(T).GetTypeCode())).ToArray();
+            var match = Regex.Matches(text, @"(\-?\w+)");
+            return match.Select(g => (T)Convert.ChangeType(g.Value, Type.GetTypeCode(typeof(T)))).ToArray();
         }
 
         public static T[,] To2DArray<T>(this string text) where T : IConvertible
