@@ -1,0 +1,15 @@
+<Project>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\CommonLibrary\CommonLibrary.csproj" />
+    <!-- <GlobalPackageReference Include="..\..\common\CommonLibrary\CommonLibrary.csproj" /> -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="CommonLibrary.Extensions" />
+    <Using Include="CommonLibrary.Extensions.ConsoleExtension" Static="true" />
+    <Using Include="CommonLibrary.Models" />
+    <Using Include="System.Text" />
+  </ItemGroup>
+  
+</Project>

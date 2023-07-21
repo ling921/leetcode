@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\solutions\P0001ToP0100\P0001ToP0100.csproj" />
+    <ProjectReference Include="..\..\solutions\P0101ToP0200\P0101ToP0200.csproj" />
+    <ProjectReference Include="..\..\solutions\P0201ToP0300\P0201ToP0300.csproj" />
+    <ProjectReference Include="..\..\solutions\P0301ToP0400\P0301ToP0400.csproj" />
+    <ProjectReference Include="..\..\solutions\P0401ToP0500\P0401ToP0500.csproj" />
+    <ProjectReference Include="..\..\solutions\P0501ToP0600\P0501ToP0600.csproj" />
+    <ProjectReference Include="..\..\solutions\P0601ToP0700\P0601ToP0700.csproj" />
+    <ProjectReference Include="..\..\solutions\P0701ToP0800\P0701ToP0800.csproj" />
+    <ProjectReference Include="..\..\solutions\P0801ToP0900\P0801ToP0900.csproj" />
+    <ProjectReference Include="..\..\solutions\P0901ToP1000\P0901ToP1000.csproj" />
+    <ProjectReference Include="..\..\solutions\P1001ToP1100\P1001ToP1100.csproj" />
+    <ProjectReference Include="..\..\solutions\P1101ToP1200\P1101ToP1200.csproj" />
+    <ProjectReference Include="..\..\solutions\P1201ToP1300\P1201ToP1300.csproj" />
+    <ProjectReference Include="..\..\solutions\P1301ToP1400\P1301ToP1400.csproj" />
+    <ProjectReference Include="..\..\solutions\P1401ToP1500\P1401ToP1500.csproj" />
+    <ProjectReference Include="..\..\solutions\P1501ToP1600\P1501ToP1600.csproj" />
+    <ProjectReference Include="..\..\solutions\P1601ToP1700\P1601ToP1700.csproj" />
+    <ProjectReference Include="..\..\solutions\P1701ToP1800\P1701ToP1800.csproj" />
+    <ProjectReference Include="..\..\solutions\P1801ToP1900\P1801ToP1900.csproj" />
+    <ProjectReference Include="..\..\solutions\P1901ToP2000\P1901ToP2000.csproj" />
+    <ProjectReference Include="..\CommonLibrary\CommonLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
